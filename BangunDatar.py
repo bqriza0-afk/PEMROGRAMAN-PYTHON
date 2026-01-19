@@ -43,7 +43,7 @@ while True:
         sisi = int(input("Masukan Sisi Persegi: "))
         print("Luas Persegi adalah:", luaspersegi(sisi))
         print("Keliling Pesegi adalah:", kelilingpersegi(sisi))
-        break # keluar loop setelah hitung selesai
+        
    
     elif pilihan == 2:
         print("Anda Mamilih Persegi Panjang")
@@ -51,8 +51,7 @@ while True:
         lebar = int(input("masukan lebar: "))
         print("luas persegi panjang adalah:", luaspersegipanjang(panjang,lebar))
         print("keliling persegi panjang adalah:", kelilingpersegipanjang(panjang,lebar))
-        break # keluar loop setelah hitung selesai
-
+        
     elif pilihan == 3:
         print("Anda Memilih Segitiga")
         alas = int(input("Masukan Alas"))
@@ -62,17 +61,49 @@ while True:
         s2 = int(input("masukkan sisi 2:"))
         s3 = int(input("masukkan sisi 3:"))
         print("keliling segitiga adalah:",kelilingsegitiga(s1, s2, s3))
-        break # keluar loop setelah hitung selesai
+       
 
     elif pilihan == 4:
         print("Anda Memilih Lingkaran")
         jari_jari = int(input("masukan jari-jari:" ))
         print("luas lingkaran adalah:",luaslingkaran(jari_jari))
         print("keliling lingkaran adalah:",kelilinglingkaran(jari_jari))
-        break # keluar loop setelah hitung selesai
+    break
+while True:
+    print("\nMenu Bangun Datar")
+    print("1. Persegi")
+    print("2. Persegi Panjang")
+    print("3. Segitiga")
+    print("4. Lingkaran")
+
+    pilihan = input("Masukkan pilihan (1-4): ")
+
+    if pilihan == "1":
+        sisi = int(input("Masukkan sisi: "))
+        print("Luas:", luaspersegi(sisi))
+        print("Keliling:", kelilingpersegi(sisi))
+
+    elif pilihan == "2":
+        panjang = int(input("Masukkan panjang: "))
+        lebar = int(input("Masukkan lebar: "))
+        print("Luas:", luaspersegipanjang(panjang, lebar))
+        print("Keliling:", kelilingpersegipanjang(panjang, lebar))
+
+    elif pilihan == "3":
+        alas = int(input("Masukkan alas: "))
+        tinggi = int(input("Masukkan tinggi: "))
+        print("Luas:", luassegitiga(alas, tinggi))
+
+    elif pilihan == "4":
+        jari = int(input("Masukkan jari-jari: "))
+        print("Luas:", luaslingkaran(jari))
+        print("Keliling:", kelilinglingkaran(jari))
 
     else:
-        print("Pilihan Tidak Tersedia")
-        # Minta input ulang jika pilihan salah
-        pilihan = int(input("Masukan pilihan anda kembali (1-4):"))
-#SELESAI  TERIMA KASIH
+        print("Pilihan tidak valid!")
+        continue
+
+    hitung_lagi = input("Hitung lagi? (ya/tidak): ").lower()
+    if hitung_lagi != "ya":
+        print("TERIMA KASIH TELAH MENGGUNAKAN PROGRAM INI ;) ")
+        break
